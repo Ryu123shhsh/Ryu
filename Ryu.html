@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+        }
+        .container {
+            margin-top: 100px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Will you be my girlfriend?</h2>
+        <img src="https://via.placeholder.com/300" alt="Meme">
+        <div class="buttons">
+            <button class="yes" onclick="alert('Yay! Aku senang! ❤️')">Yes</button>
+            <button class="no" onclick="moveNoButton()" id="noButton">No</button>
+        </div>
+    </div><script>
+    function moveNoButton() {
+        let noButton = document.getElementById("noButton");
+        let x = Math.random() * (window.innerWidth - 100);
+        let y = Math.random() * (window.innerHeight - 50);
+        noButton.style.position = "absolute";
+        noButton.style.left = x + "px";
+        noButton.style.top = y + "px";
+    }
+</script>
+
+</body>
+</html>
